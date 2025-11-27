@@ -1,0 +1,21 @@
+name: 📌 Nova Tarefa
+description: Criar um item no backlog (Apenas Equipe)
+title: "[Tag]: Título da Tarefa"
+labels: ["triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "### Detalhes da Tarefa"
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição
+      description: O que precisa ser feito?
+      placeholder: Ex: Criar endpoint de login...
+    validations:
+      required: true
+  - type: input
+    id: priority
+    attributes:
+      label: Prioridade
+      placeholder: P0, P1, P2...
