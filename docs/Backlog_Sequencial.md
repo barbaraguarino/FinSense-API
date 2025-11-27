@@ -120,7 +120,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     2. **Prioridade:** P1
     3. **Tamanho: S**
     4. **Tag:** `infra`
-    5. **Critério de Testes**: 
+    5. **Critério de Aceitação**: 
         - [ ]  Adicionar dependência do AWS SDK v2 para SES.
         - [ ]  Configurar credenciais da AWS via Variáveis de Ambiente (nunca hardcoded).
         - [ ]  Implementar `EmailService` com método `sendEmail(to, subject, body)`.
