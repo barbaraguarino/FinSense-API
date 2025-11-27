@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Apenas Equipe FinSense
+    url: https://github.com/barbaraguarino
+    about: Abertura de issues restrita aos mantenedores do projeto.
