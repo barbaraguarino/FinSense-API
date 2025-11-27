@@ -1,6 +1,6 @@
 name: 📌 Nova Tarefa
 description: Use este formulário para criar uma tarefa no backlog.
-title: "[Tag]: Título da Tarefa"
+title: "Título da Tarefa"
 labels: ["triage"]
 body:
   - type: markdown
@@ -13,11 +13,3 @@ body:
       description: O que precisa ser desenvolvido?
     validations:
       required: true
-  - type: input
-    id: priority
-    attributes:
-      label: Prioridade (P0, P1, P2, P3)
-  - type: input
-    id: size
-    attributes:
-      label: Tamanho (XS, S, M, L, XL)
