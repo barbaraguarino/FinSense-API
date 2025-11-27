@@ -1,7 +1,7 @@
 name: Verificar Spring Boot
 on:
   pull_request:
-    branches: [ "main", "dev", "release" ]
+    branches: [ "main", "dev", "releases" ]
   workflow_dispatch:
 
 jobs:
