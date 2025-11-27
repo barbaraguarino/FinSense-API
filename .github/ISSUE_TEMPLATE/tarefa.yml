@@ -1,5 +1,5 @@
 name: 📌 Nova Tarefa
-description: Criar um item no backlog (Apenas Equipe)
+description: Use este formulário para criar uma tarefa no backlog.
 title: "[Tag]: Título da Tarefa"
 labels: ["triage"]
 body:
@@ -10,12 +10,14 @@ body:
     id: description
     attributes:
       label: Descrição
-      description: O que precisa ser feito?
-      placeholder: Ex: Criar endpoint de login...
+      description: O que precisa ser desenvolvido?
     validations:
       required: true
   - type: input
     id: priority
     attributes:
-      label: Prioridade
-      placeholder: P0, P1, P2...
+      label: Prioridade (P0, P1, P2, P3)
+  - type: input
+    id: size
+    attributes:
+      label: Tamanho (XS, S, M, L, XL)
