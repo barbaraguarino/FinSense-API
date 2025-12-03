@@ -60,7 +60,7 @@ Define a **natureza técnica** da tarefa. Responde à pergunta: "Onde no sistema
 
 Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem abaixo.
 
-- [ ]  **#1 Internacionalização (i18n)**
+- [x]  **#1 Internacionalização (i18n)**
     
     **Motivação:** Preparar a API para responder em múltiplos idiomas desde o primeiro dia, evitando refatoração massiva de strings hardcoded no futuro.
     
@@ -69,10 +69,10 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     3. **Tamanho: S**
     4. **Tag:** `core` 
     5. **Critérios de Aceitação:**
-        - [ ]  A aplicação deve conter arquivos de propriedades: `messages.properties` (fallback), `messages_pt.properties`, `messages_en.properties`.
-        - [ ]  Configurar um `LocaleResolver` ou interceptor para ler o header `Accept-Language` da requisição HTTP.
-        - [ ]  Criar um endpoint de teste simples que retorna uma mensagem traduzida (ex: "Olá mundo" vs "Hello World").
-        - [ ]  As mensagens de validação do Bean Validation (`@NotNull`, `@Email`) devem ser lidas desses arquivos.
+        - [x]  A aplicação deve conter arquivos de propriedades: `messages.properties` (fallback), `messages_pt_BR.properties`, `messages_en_US.properties`.
+        - [x]  Configurar um `LocaleResolver` ou interceptor para ler o header `Accept-Language` da requisição HTTP.
+        - [x]  Criar um endpoint de teste simples que retorna uma mensagem traduzida (ex: "Olá mundo" vs "Hello World").
+        - [x]  As mensagens de validação do Bean Validation (`@NotNull`, `@Email`) devem ser lidas desses arquivos.
 - [ ]  **#2 Tratamento Global de Erros**
     
     **Motivação:** Padronizar as respostas de erro da API para que o frontend (ou quem consome) sempre saiba o formato do JSON em caso de falha.
