@@ -1,5 +1,6 @@
 package com.finsense.api.presentation.controller;
 
+import lombok.NonNull;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ public class WelcomeController {
     }
 
     @GetMapping
-    public ResponseEntity<String> welcome() {
+    public ResponseEntity<@NonNull String> welcome() {
         Locale locale = LocaleContextHolder.getLocale();
 
         String message = Objects.requireNonNull(
