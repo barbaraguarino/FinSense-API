@@ -1,4 +1,4 @@
-package com.finsense.api.application.dto;
+package com.finsense.api.application.user.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
