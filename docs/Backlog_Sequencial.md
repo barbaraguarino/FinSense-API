@@ -73,7 +73,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
         - [x]  Configurar um `LocaleResolver` ou interceptor para ler o header `Accept-Language` da requisição HTTP.
         - [x]  Criar um endpoint de teste simples que retorna uma mensagem traduzida (ex: "Olá mundo" vs "Hello World").
         - [x]  As mensagens de validação do Bean Validation (`@NotNull`, `@Email`) devem ser lidas desses arquivos.
-- [ ]  **#2 Tratamento Global de Erros**
+- [x]  **#2 Tratamento Global de Erros**
     
     **Motivação:** Padronizar as respostas de erro da API para que o frontend (ou quem consome) sempre saiba o formato do JSON em caso de falha.
     
@@ -82,12 +82,12 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     3. **Tamanho: S**
     4. **Tag:** `core`
     5. **Dependências**:
-        - [ ]  #1: As mensagens de erro devem usar o sistema de i18n
+        - [x]  #1: As mensagens de erro devem usar o sistema de i18n
     6. **Critérios de Aceitação:**
-        - [ ]  Implementar classe `GlobalExceptionHandler`.
-        - [ ]  O formato de erro deve seguir a **RFC 7807 (Problem Details)** ou um padrão interno consistente contendo: `timestamp`, `status`, `error`, `message` (traduzida) e `path`.
-        - [ ]  Capturar `MethodArgumentNotValidException` e retornar uma lista detalhada dos campos inválidos.
-        - [ ]  Criar uma exceção base de negócio (ex: `BusinessRuleException`) para ser estendida por erros específicos.
+        - [x]  Implementar classe `GlobalExceptionHandler`.
+        - [x]  O formato de erro deve seguir a **RFC 7807 (Problem Details)** ou um padrão interno consistente contendo: `timestamp`, `status`, `error`, `message` (traduzida) e `path`.
+        - [x]  Capturar `MethodArgumentNotValidException` e retornar uma lista detalhada dos campos inválidos.
+        - [x]  Criar uma exceção base de negócio (ex: `BusinessRuleException`) para ser estendida por erros específicos.
 - [ ]  **#3 Cadastro de Usuário**
     
     **Como** visitante, **quero** criar minha conta informando e-mail, nome e senha, **para que** eu possa iniciar meu acesso ao FinSense.
@@ -96,7 +96,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     2. **Tamanho: M**
     3. **Tag:** `feat`
     4. **Dependências**:
-        - [ ]  #2: As validações de formulário precisam do Exception Handler para retornar JSON bonito
+        - [x]  #2: As validações de formulário precisam do Exception Handler para retornar JSON bonito
     5. **Critério de Aceitação:** 
         - [ ]  Endpoint `POST /api/v1/auth/signup`.
         - [ ]  O corpo da requisição (`request body`) deve ser um DTO (`RegisterUserRequestDTO`) contendo os campos:
