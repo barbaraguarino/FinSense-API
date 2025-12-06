@@ -7,7 +7,7 @@ import com.finsense.api.domain.user.model.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserMapper {
+public class UserRegistrationMapper {
 
     public User toEntity(RegisterUserRequestDTO dto){
         if(dto == null) return null;
