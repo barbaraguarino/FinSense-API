@@ -1,6 +1,7 @@
 package com.finsense.api.presentation.controller;
 
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
@@ -14,13 +15,10 @@ import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/v1/welcome")
+@RequiredArgsConstructor
 public class WelcomeController {
 
     private final MessageSource messageSource;
-
-    public WelcomeController(MessageSource messageSource) {
-        this.messageSource = messageSource;
-    }
 
     @GetMapping
     public ResponseEntity<@NonNull String> welcome() {
