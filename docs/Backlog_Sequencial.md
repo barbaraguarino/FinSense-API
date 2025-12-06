@@ -88,7 +88,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
         - [x]  O formato de erro deve seguir a **RFC 7807 (Problem Details)** ou um padrão interno consistente contendo: `timestamp`, `status`, `error`, `message` (traduzida) e `path`.
         - [x]  Capturar `MethodArgumentNotValidException` e retornar uma lista detalhada dos campos inválidos.
         - [x]  Criar uma exceção base de negócio (ex: `BusinessRuleException`) para ser estendida por erros específicos.
-- [ ]  **#3 Cadastro de Usuário**
+- [x]  **#3 Cadastro de Usuário**
     
     **Como** visitante, **quero** criar minha conta informando e-mail, nome e senha, **para que** eu possa iniciar meu acesso ao FinSense.
     
@@ -134,7 +134,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     2. **Tamanho: M**
     3. **Tag:** `sec`
     4. **Dependências**:
-        - [ ]  #3: Precisa ter o usuário cadastrado
+        - [x]  #3: Precisa ter o usuário cadastrado
         - [ ]  #4: Precisa do serviço de e-mail para enviar o token
     5. **Critério de Aceitação:** 
         - [ ]  Refatorar o fluxo de Cadastro (#003) para gerar um token aleatório (UUID ou numérico) e enviar via `EmailService` (#004).
