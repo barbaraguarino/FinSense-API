@@ -1,11 +1,13 @@
 package com.finsense.api.presentation.advice;
 
 import com.finsense.api.application.exception.BusinessRuleException;
+import com.finsense.api.application.user.exception.EmailDuplicateException;
 import com.finsense.api.presentation.dto.ErrorDTO;
 import com.finsense.api.presentation.dto.ErrorDetailDTO;
 import jakarta.annotation.Nullable;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -26,13 +28,10 @@ import java.util.Locale;
 
 @Slf4j
 @RestControllerAdvice
+@RequiredArgsConstructor
 public class GlobalExceptionHandler {
 
     private final MessageSource messageSource;
-
-    public GlobalExceptionHandler(MessageSource messageSource) {
-        this.messageSource = messageSource;
-    }
 
     @ExceptionHandler(BusinessRuleException.class)
     public ResponseEntity<@NonNull ErrorDTO> handleBusinessRuleException(
@@ -40,7 +39,7 @@ public class GlobalExceptionHandler {
             HttpServletRequest request
     ) {
         ErrorDTO dto = createErrorDTO(
-                HttpStatus.UNPROCESSABLE_CONTENT,
+                exception.getHttpStatus(),
                 exception.getTitleCode(),
                 exception.getMessageCode(),
                 exception.getArgs(),
@@ -48,7 +47,7 @@ public class GlobalExceptionHandler {
                 null
         );
 
-        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_CONTENT).body(dto);
+        return ResponseEntity.status(exception.getHttpStatus()).body(dto);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

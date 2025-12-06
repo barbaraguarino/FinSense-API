@@ -34,7 +34,7 @@ class GlobalExceptionHandlerTest {
 
         @GetMapping("/business-exception")
         public void throwBusinessException() {
-            throw new BusinessRuleException("error.business-rule.title", "error.business-rule.account.insufficient-funds");
+            throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_CONTENT, "error.business-rule.title", "error.business-rule.account.insufficient-funds");
         }
 
         @PostMapping("/validation-exception")
