@@ -107,10 +107,10 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
         - [x]  A senha **deve** ser criptografada (BCrypt) antes de ser salva.
         - [x]  O e-mail deve ser único no banco de dados (case-insensitive).
         - [x]  O usuário é criado com status inicial `PENDING` (ou `DISABLED`).
-        - [ ]  Neste momento, apenas logar no console que um e-mail deveria ser enviado (preparação para a issue #004).
+        - [x]  Neste momento, apenas logar no console que um e-mail deveria ser enviado (preparação para a issue #004).
     6. **Critérios de Aceitação:**
         - [x]  Cadastro com dados válidos -> Retorna 201 Created.
-        - [ ]  Cadastro com e-mail já existente -> Retorna 409 Conflict com mensagem traduzida.
+        - [x]  Cadastro com e-mail já existente -> Retorna 409 Conflict com mensagem traduzida.
         - [ ]  Cadastro com senha fraca -> Retorna 400 Bad Request com detalhes do erro.
 - [ ]  **#4** **Integração AWS SES**
     
