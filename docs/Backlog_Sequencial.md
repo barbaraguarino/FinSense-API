@@ -99,17 +99,17 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
         - [x]  #2: As validações de formulário precisam do Exception Handler para retornar JSON bonito
     5. **Critério de Aceitação:** 
         - [ ]  Endpoint `POST /api/v1/auth/signup`.
-        - [ ]  O corpo da requisição (`request body`) deve ser um DTO (`RegisterUserRequestDTO`) contendo os campos:
+        - [x]  O corpo da requisição (`request body`) deve ser um DTO (`RegisterUserRequestDTO`) contendo os campos:
             1. `name` (String)
             2. `email` (String)
             3. `password` (String)
-        - [ ]  O sistema deve validar o formato do e-mail e a força da senha (mínimo 10 caracteres, letras, números e caractere especial).
-        - [ ]  A senha **deve** ser criptografada (BCrypt) antes de ser salva.
-        - [ ]  O e-mail deve ser único no banco de dados (case-insensitive).
-        - [ ]  O usuário é criado com status inicial `PENDING` (ou `DISABLED`).
+        - [x]  O sistema deve validar o formato do e-mail e a força da senha (mínimo 10 caracteres, letras, números e caractere especial).
+        - [x]  A senha **deve** ser criptografada (BCrypt) antes de ser salva.
+        - [x]  O e-mail deve ser único no banco de dados (case-insensitive).
+        - [x]  O usuário é criado com status inicial `PENDING` (ou `DISABLED`).
         - [ ]  Neste momento, apenas logar no console que um e-mail deveria ser enviado (preparação para a issue #004).
     6. **Critérios de Aceitação:**
-        - [ ]  Cadastro com dados válidos -> Retorna 201 Created.
+        - [x]  Cadastro com dados válidos -> Retorna 201 Created.
         - [ ]  Cadastro com e-mail já existente -> Retorna 409 Conflict com mensagem traduzida.
         - [ ]  Cadastro com senha fraca -> Retorna 400 Bad Request com detalhes do erro.
 - [ ]  **#4** **Integração AWS SES**
