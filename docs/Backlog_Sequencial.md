@@ -98,7 +98,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     4. **Dependências**:
         - [x]  #2: As validações de formulário precisam do Exception Handler para retornar JSON bonito
     5. **Critério de Aceitação:** 
-        - [ ]  Endpoint `POST /api/v1/auth/signup`.
+        - [x]  Endpoint `POST /api/v1/auth/signup`.
         - [x]  O corpo da requisição (`request body`) deve ser um DTO (`RegisterUserRequestDTO`) contendo os campos:
             1. `name` (String)
             2. `email` (String)
@@ -111,7 +111,7 @@ Estas tarefas já foram planejadas tecnicamente e devem ser executadas na ordem 
     6. **Critérios de Aceitação:**
         - [x]  Cadastro com dados válidos -> Retorna 201 Created.
         - [x]  Cadastro com e-mail já existente -> Retorna 409 Conflict com mensagem traduzida.
-        - [ ]  Cadastro com senha fraca -> Retorna 400 Bad Request com detalhes do erro.
+        - [x]  Cadastro com senha fraca -> Retorna 400 Bad Request com detalhes do erro.
 - [ ]  **#4** **Integração AWS SES**
     
     **Motivação:** Permitir que o sistema envie e-mails reais para verificação de conta e notificações, substituindo logs de console.
